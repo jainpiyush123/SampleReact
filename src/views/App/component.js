@@ -13,6 +13,7 @@ import TopNavigation from '../../components/topNavigation'
 
 import ProductNoPrice from '../ProductNoPrice/container'
 import ProductRegular from '../ProductRegular/container'
+import ProductGrid from '../ProductGrid/container'
 
 import * as Phase from '../../constants/phase'
 
@@ -67,6 +68,7 @@ class App extends Component {
           <Redirect to="/ProductRegular" />} />
           <Route path={'/ProductRegular'} component={ProductRegular} />
           <Route path={'/ProductNoPrice'} component={ProductNoPrice} />
+          <Route path={'/ProductGrid'} component={ProductGrid} />
         </StyledApp>
       </Router>
     )
