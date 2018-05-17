@@ -34,6 +34,10 @@ export default class ProductGrid extends Component {
     }, 1000);
   };
 
+  openDropDown = () => {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
   render() {
 
     return (
@@ -61,7 +65,7 @@ export default class ProductGrid extends Component {
 
       <div className="filter w-clearfix grid-dropdrown-xs">
         <div className="dropdown">
-          <button   className="dropbtn">Sort by <img src="/img/down-arrow.png" /></button>
+          <button onClick={this.openDropDown}  className="dropbtn">Sort by <img src="/img/down-arrow.png" /></button>
           <div id="myDropdown" className="dropdown-content">
             <a href="#">Coffee</a>
             <a href="#">Grindes</a>
