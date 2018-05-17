@@ -17,7 +17,7 @@ export default class TopNavigation extends React.Component {
     return (
 
         <HeaderFixed data-collapse="medium" data-animation="over-right" data-duration="400" className="navbar w-nav">
-          <div className="product-section containermobile w-hidden-medium w-hidden-small w-hidden-tiny w-container"><a href="javascript:void(0)"  className="brand w-nav-brand"><img src="img/dispatch-coffee-icon-logo.svg" width="126" className="image-9"/></a>
+          <div className="product-section containermobile /*w-hidden-medium w-hidden-small w-hidden-tiny*/ w-container"><a href="javascript:void(0)"  className="brand w-nav-brand"><img src="img/dispatch-coffee-icon-logo.svg" width="126" className="image-9"/></a>
             <nav role="navigation" className="nav-menu w-nav-menu">
               <div className="menuopen w-nav-button">
                 <div className="iconsecond w-icon-nav-menu"></div>

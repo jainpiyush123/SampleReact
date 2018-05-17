@@ -21,7 +21,7 @@ export default class ProductGrid extends Component {
   }
 
   fetchMoreData = () => {
-    if (this.state.items.length >= 50) {
+    if (this.state.items.length >= 500) {
       this.setState({ hasMore: false });
       return;
     }
@@ -50,7 +50,7 @@ export default class ProductGrid extends Component {
             </div><a href="#" className="buttonpurple-2">Get it Now</a></div>
         </div>
       </div>
-      <div className="filter w-clearfix">
+      <div className="filter w-clearfix grid-dropdrown-md">
         <div className="text-block-8">Sort by: </div>
         <div className="sort">Coffee</div>
         <div className="sort">Grindes</div>
@@ -58,6 +58,20 @@ export default class ProductGrid extends Component {
         <div className="sort">Kits</div>
         <div className="sort">Merch</div>
       </div>
+
+      <div className="filter w-clearfix grid-dropdrown-xs">
+        <div className="dropdown">
+          <button   className="dropbtn">Sort by <img src="/img/down-arrow.png" /></button>
+          <div id="myDropdown" className="dropdown-content">
+            <a href="#">Coffee</a>
+            <a href="#">Grindes</a>
+            <a href="#">Accessories</a>
+            <a href="#">Kits</a>
+            <a href="#">Merch</a>
+          </div>
+        </div>
+      </div>
+
       <div className="section_cards">
         <div className="card-row w-row">
           <InfiniteScroll
@@ -67,16 +81,18 @@ export default class ProductGrid extends Component {
           >
           {this.state.items.map((i, index) => (
             <div key={index} className="card-column-2 w-col w-col-4 w-col-stack">
-            <div className="card-wrapper-2"><a href="javascript:void(0)" className="link-block-4 w-inline-block"></a>
-              <div className="product-card-description-2">
-                <div>
-                  <h3 className="product-name-title">V60</h3>
-                  <h3 className="product-brand">name of brand or country</h3>
+            <div className="card-wrapper-2"><a href="javascript:void(0)" className="link-block-4  w-inline-block"></a>
+              <div ><a href="javascript:void(0)" className="link-img  w-inline-block"></a> </div>
+                <div className="product-card-description-2">
+                  <div>
+                    <h3 className="product-name-title">V60</h3>
+                    <h3 className="product-brand">name of brand or country</h3>
+                  </div>
+                  <div className="price-wrapper">
+                    <h2 className="product-price">$199</h2>
+                  </div>
                 </div>
-                <div className="price-wrapper">
-                  <h2 className="product-price">$199</h2>
-                </div>
-              </div>
+             
             </div>
           </div>
           ))}
