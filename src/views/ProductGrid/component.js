@@ -21,7 +21,7 @@ export default class ProductGrid extends Component {
   }
 
   fetchMoreData = () => {
-    if (this.state.items.length >= 500) {
+    if (this.state.items.length >= 50) {
       this.setState({ hasMore: false });
       return;
     }
