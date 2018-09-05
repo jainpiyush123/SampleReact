@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from "prop-types"
 import {
   Router,
@@ -54,7 +54,7 @@ const StyledApp = styled.div`
   // Styles go here
 `
 
-class App extends Component {
+class App extends PureComponent {
   static contextTypes = {
     router: PropTypes.object
   }
